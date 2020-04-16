@@ -8,17 +8,17 @@
 
 import UIKit
 
-class DSGradientProgressHud: UIView {
+public class DSGradientProgressHud: UIView {
 
     private var progressView: DSGradientProgressView?
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         progressView?.center = self.center
     }
     
-    init(frame: CGRect, view: UIView) {
+    public init(frame: CGRect, view: UIView) {
         
         super.init(frame: frame)
     
@@ -44,12 +44,12 @@ class DSGradientProgressHud: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func showhud(to view: UIView) {
+    public class func showhud(to view: UIView) {
         let overlay = DSGradientProgressHud(frame: view.bounds, view: view)
         view.addSubview(overlay)
     }
     
-    class func hideHud(for view: UIView) {
+    public class func hideHud(for view: UIView) {
         view.subviews.reversed().forEach { (subView) in
             if subView is DSGradientProgressHud {
                 subView.removeFromSuperview()
@@ -58,7 +58,7 @@ class DSGradientProgressHud: UIView {
         }
     }
     
-    class func hideAllHud(for view: UIView) {
+    public class func hideAllHud(for view: UIView) {
         view.subviews.forEach { (subView) in
             if subView is DSGradientProgressHud {
                 subView.removeFromSuperview()

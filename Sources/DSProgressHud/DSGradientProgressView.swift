@@ -8,30 +8,30 @@
 
 import UIKit
 
-class DSGradientProgressView: UIView {
+public class DSGradientProgressView: UIView {
 
     private var gradientLayer: CAGradientLayer?
     
     /// No of segments (Gradient colors) in the circle
-    var segments: Int = 5 {
+    public var segments: Int = 5 {
         didSet {
             draw()
         }
     }
     
-    var colors: [CGColor]? {
+    public var colors: [CGColor]? {
         didSet {
             draw()
         }
     }
     
-    var lineWidth: CGFloat = 2 {
+    public var lineWidth: CGFloat = 2 {
         didSet {
             draw()
         }
     }
     
-    override var frame: CGRect {
+    public override var frame: CGRect {
         didSet {
             draw()
         }
@@ -45,7 +45,7 @@ class DSGradientProgressView: UIView {
         super.init(coder: coder)
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         self.draw()
