@@ -1,11 +1,11 @@
 import UIKit
 
 
-class DSProgressHud: UIView {
+public class DSProgressHud: UIView {
     
     private var progressView: DSProgressView?
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         progressView?.center = self.center
@@ -37,12 +37,12 @@ class DSProgressHud: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func showhud(to view: UIView) {
+    public class func showhud(to view: UIView) {
         let overlay = DSProgressHud(frame: view.bounds, view: view)
         view.addSubview(overlay)
     }
     
-    class func hideHud(for view: UIView) {
+    public class func hideHud(for view: UIView) {
         view.subviews.reversed().forEach { (subView) in
             if subView is DSProgressHud {
                 subView.removeFromSuperview()
@@ -51,7 +51,7 @@ class DSProgressHud: UIView {
         }
     }
     
-    class func hideAllHud(for view: UIView) {
+    public class func hideAllHud(for view: UIView) {
         view.subviews.forEach { (subView) in
             if subView is DSProgressHud {
                 subView.removeFromSuperview()
