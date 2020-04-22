@@ -2,9 +2,12 @@
 
 ProgressHud to show indeterminent progress to download or upload any task.
 
-# Sample Images
+# Gradient Progress
 
 ![](Promotional_Images/Gradient.gif)
+
+# Simple Progress
+
 ![](Promotional_Images/plain.gif)
 
 # Usage Sample
