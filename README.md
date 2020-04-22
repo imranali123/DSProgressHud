@@ -14,7 +14,7 @@ ProgressHud to show indeterminent progress to download or upload any task.
 
 - There are two types of Hud `DSProgressHud` and `DSGradientProgressHud`
 
-- You need import progressHud `import ProgressHud`
+- You need to import progressHud `import ProgressHud`
 - To show `DSProgressHud`
 
 ```swift
