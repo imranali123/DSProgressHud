@@ -29,7 +29,7 @@ DSProgressHud.hideHud(for: self.view)
 OR
 
 ```swift
-DSGradientProgressHud.showhud(to: self.view)
+DSProgressHud.hideAllHud(to: self.view)
 ```
 
 To show `DSGradientProgressHud`
