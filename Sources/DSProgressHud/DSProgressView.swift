@@ -42,7 +42,11 @@ class DSProgressView: UIView {
             let shapeLayer = CAShapeLayer()
             shapeLayer.frame = bounds
             shapeLayer.lineWidth = lineWidth
-            shapeLayer.strokeColor = UIColor.black.cgColor
+            if #available(iOS 13.0, *) {
+                shapeLayer.strokeColor = UIColor.label.cgColor
+            } else {
+                shapeLayer.strokeColor = UIColor.black.cgColor
+            }
             shapeLayer.fillColor = UIColor.clear.cgColor
             shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height)).cgPath
             shapeLayer.strokeStart = 0

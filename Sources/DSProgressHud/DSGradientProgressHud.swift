@@ -29,7 +29,11 @@ public class DSGradientProgressHud: UIView {
         progressView = DSGradientProgressView(frame: CGRect(origin: .zero, size: CGSize(width: width, height: width)))
         self.addSubview(progressView!)
         progressView?.center = self.center
-        self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        if #available(iOS 13.0, *) {
+            self.backgroundColor = UIColor.label.withAlphaComponent(0.2)
+        } else {
+            self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        }
         
         var angle: CGFloat = 0.0
         if #available(iOS 12.0, *) {

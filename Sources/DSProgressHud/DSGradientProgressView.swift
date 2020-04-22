@@ -61,7 +61,6 @@ class DSGradientProgressView: UIView {
                     let color = UIColor(hue: CGFloat(index) / CGFloat(segments), saturation: 1, brightness: 1, alpha: 1)
                     colors.append(color.cgColor)
                 }
-//                colors.append(UIColor(hue: 0, saturation: 1, brightness: 1, alpha: 1).cgColor)
                 return colors
             }()
         }
